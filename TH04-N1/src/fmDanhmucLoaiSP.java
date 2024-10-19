@@ -79,6 +79,11 @@ public class fmDanhmucLoaiSP extends javax.swing.JFrame {
         jLabel3.setText("Tên loại:");
 
         txtma.setText(" ");
+        txtma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmaActionPerformed(evt);
+            }
+        });
 
         txtten.setText(" ");
         txtten.addActionListener(new java.awt.event.ActionListener() {
@@ -327,6 +332,10 @@ public class fmDanhmucLoaiSP extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(null, "Vui lòng chọn một dòng để sửa!");
         }
     }//GEN-LAST:event_btsuaActionPerformed
+
+    private void txtmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmaActionPerformed
 
     /**
      * @param args the command line arguments
