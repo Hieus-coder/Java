@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 public class ConnectToSql {
     public static void main(String[] args) {
-        String url = "jdbc:sqlserver://localhost:1433;databaseName=QuanLyLop;encrypt=true;trustServerCertificate=true;";
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=QLSanpham;encrypt=true;trustServerCertificate=true;";
         String username = "sa"; // Thay doi neu can
         String password = "12345"; // Thay doi neu can
 
