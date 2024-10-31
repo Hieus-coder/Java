@@ -4,29 +4,25 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author Hieus
- */
 public class Connect {
+    private Connection conn;
 
-    public  static java.sql.Connection getConnect() {
+    public Connect() {
         try {
-            // Sửa tên driver
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=QLSanpham;encrypt=true;trustServerCertificate=true;";
-            Connection conn;
-            // Kết nối đến cơ sở dữ liệu
             conn = DriverManager.getConnection(connectionUrl, "sa", "12345");
-            System.out.println("Kết nối thành công đến cơ sở dữ liệu.");
-            return conn;
+            System.out.println("Connected.");
         } catch (ClassNotFoundException e) {
-            System.out.println("Không tìm thấy driver JDBC: " + e.getMessage());
+            System.out.println("Don't find driver JDBC: " + e.getMessage());
             e.printStackTrace();
         } catch (SQLException e) {
-            System.out.println("Lỗi kết nối: " + e.getMessage());
+            System.out.println("Er: " + e.getMessage());
             e.printStackTrace();
         }
-        return null;
+    }
+
+    public Connection getConnect() {
+        return conn;
     }
 }
