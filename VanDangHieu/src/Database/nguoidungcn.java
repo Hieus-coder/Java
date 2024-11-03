@@ -31,4 +31,18 @@ public class nguoidungcn {
             return false;
         }
     }
+
+    public boolean dangky(String username, String password) {
+        try {
+            String sql = "INSERT INTO LoaiSP (MaLoai, TenLoai) VALUES (?, ?)";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            int usernew = pstmt.executeUpdate();
+            return usernew > 0;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
 }
